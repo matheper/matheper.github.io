@@ -1,0 +1,55 @@
+html, body{
+    height:100%;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+body { 
+    background: url(../images/bg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.bs-docs-header{
+    min-height:100%;
+    height:auto;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+}
+
+h1{
+    font-size: 60px;
+}
+
+p{
+    font-size: 17px;
+    text-align: justify;
+}
+
+.btn-primary{
+    border-color: black;
+}
+
+.buttons{
+    margin-top: 30px;
+}
+#facebook{
+    background-color: #4c66a4;
+}
+#linkedin{
+    background-color: #287bbc;
+}
+#twitter{
+    background-color: #55acee;
+}
+#bitbucket{
+    background-color: #205081;
+}
+#github{
+    background-color: #777;
+}
+#googleplus{
+    background-color:#db4b39;
+}
+
