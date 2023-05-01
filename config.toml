@@ -1,7 +1,7 @@
 baseURL         = "http://matheper.com/"
-languageCode    = "en-us"
+languageCode    = "en"
 title           = "Matheus Pereira"
-theme           = "hello-friend-ng"
+theme           = "congo"
 
 
 [params]
@@ -20,8 +20,8 @@ theme           = "hello-friend-ng"
   enableSharingButtons = true
 
   # Metadata mostly used in document's head
-  description = "My new homepage or blog"
-  keywords = "homepage, blog"
+  description = "Matheus Pereira blog"
+  keywords = "matheper, blog"
   images = [""]
 
 [taxonomies]
