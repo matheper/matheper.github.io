@@ -22,3 +22,8 @@ https://gohugo.io/commands/hugo_server
 
 
 For details related to the theme, please visit [Hello Friend NG](https://github.com/rhazdon/hugo-theme-hello-friend-ng).
+
+
+Update modules/theme
+
+```git submodule update --remote --merge```
