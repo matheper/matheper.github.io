@@ -13,7 +13,7 @@ Olá, mundo! 👋
 
 Estou animado para lançar este blog onde vou compartilhar meus pensamentos e experiências sobre engenharia de software e inteligência artificial. Sou um engenheiro de software que é apaixonado por construir soluções inovadoras e impactantes usando tecnologias de IA. Tenho trabalhado na área há mais de cinco anos e aprendi muito com vários projetos, desafios e oportunidades.
 
-![Um caderno aberto, uma caneta, e um notebook em cima de uma escrivaninha.](/img/blogging-desk-notebook.jpg)
+![Um caderno aberto, uma caneta, e um notebook em cima de uma escrivaninha.](blogging-desk-notebook.jpg)
 
 Neste blog, vou escrever sobre temas como:
 
