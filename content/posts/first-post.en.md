@@ -1,7 +1,7 @@
 ---
 title: "Welcome to my blog!"
 date: 2023-07-08T11:12:24-04:00
-draft: true
+draft: false
 toc: false
 images:
 tags:
