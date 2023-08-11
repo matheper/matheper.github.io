@@ -1,10 +1,10 @@
-languageCode = "pt-br"
+languageCode = "pt"
 languageName = "Português"
 weight = 1
 title = "Matheus Pereira"
 
 [params]
-  displayName = "PT"
+  displayName = "Português"
   isoCode = "pt-br"
   rtl = false
   dateFormat = "2 January 2006"
@@ -20,6 +20,7 @@ title = "Matheus Pereira"
 #   bio = "A little bit about you"
   links = [
     { github = "https://github.com/matheper" },
+    { linkedin = "https://linkedin.com/in/matheper" },
   ]
 #     { email = "mailto:hello@your_domain.com" },
 #     { link = "https://link-to-some-website.com/" },
