@@ -1,5 +1,5 @@
 ---
-title: "Bem-vindo ao meu blog!"
+title: "Welcome to my blog!"
 date: 2023-07-08T11:12:24-04:00
 draft: false
 toc: false
@@ -9,9 +9,17 @@ tags:
   - artificial intelligence
 ---
 
+## Hello, world!
+
 Hello, world! 👋
 
 I'm excited to launch this blog where I will share my thoughts and experiences on software engineering and artificial intelligence. I'm a software engineer who is passionate about building innovative and impactful solutions using AI technologies. I have been working in the field for over five years, and I have learned a lot from various projects, challenges, and opportunities.
+
+<!-- ![An open notebook, a pen, and a laptop on top of a desk.](/img/blogging-desk-notebook.jpg) -->
+
+![An open notebook, a pen, and a laptop on top of a desk.](blogging-desk-notebook.jpg)
+
+## Topics of interest
 
 In this blog, I will write about topics such as:
 
