@@ -73,7 +73,7 @@ defaultFeaturedImage = "img/action-blur-bulb.jpg" # used as default for featured
   showWordCount = true
   showSummary = true
   sharingLinks = [ "linkedin", "twitter", "reddit", "pinterest", "facebook", "email", "whatsapp", "telegram"]
-  showComments = true
+  showComments = false
 
 [list]
   showHero = true
