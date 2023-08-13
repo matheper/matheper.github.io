@@ -11,6 +11,8 @@ tags:
 categories:
   - Inteligência Artificial
   - Desenvolvimento de Software
+series: ["Transferência de Estilo com Flutter e TensorFlow"]
+series_order: 1
 ---
 
 Este é o primeiro post de uma série voltada para o desenvolvimento de uma aplicação de Machine Learning (ML) do início ao fim (end-to-end) utilizando [Flutter](https://flutter.dev/) e [TensorFlow](https://www.tensorflow.org/). Vamos implementar um app que faz a transferência de estilo de uma imagem para as fotos tiradas com o celular utilizando Machine Learning. Uma técnica conhecida como [Neural Artistic Style Transfer](https://arxiv.org/abs/1508.06576).
