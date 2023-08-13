@@ -1,12 +1,11 @@
 ---
 title: "Machine Learning no Device ou Servidor"
 description: "Transferência de Estilo com Flutter e TensorFlow"
-date: 2020-12-07T03:24:00-04:00
+date: 2020-09-12T03:24:00-04:00
 draft: false
 toc: false
 images:
 tags:
-  - Flutter
 categories:
   - Desenvolvimento de Software
   - Inteligência Artificial
@@ -38,7 +37,7 @@ Quando seu dispositivo tem acesso à internet e recursos suficientes, você aind
 
 Como estamos falando de trafegar dados pela rede, existe também a questão de segurança e privacidade. Se seu modelo rodar diretamente no dispositivo, você pode garantir que os dados  do usuário estarão protegidos. Você também pode garantir isso em um servidor com conexão segura, mas a questão é que você pode rodar todo o processo de inferência diretamente no device, sem enviar informação alguma do usuário para fora do próprio dispositivo do usuário.
 
-### Inferencia no Servidor:
+### Inferencia no Servidor
 
 * Vantagens:
 	* Maior poder computacional, o modelo não estará limitado à capacidade do dispositivo.
@@ -52,7 +51,7 @@ Como estamos falando de trafegar dados pela rede, existe também a questão de s
 	* Consumo extra de internet. Todas as informações precisam trafegar pela rede.
 	* Servidor como gargalo e ponto único de falha. Imagine um servidor que rode uma inferência simples, mas para milhares de usuário. O servidor precisa suportar esta carga de trabalho e implementar um mecanismo de auto-scaling e redundância, o que significa maior complexidade de infraestrutura. Se a inferência rodasse diretamente no dispositivo, este processamento seria naturalmente distribuído, com cada dispositivo processando suas próprias inferências.
  
-### Inferência no Device:
+### Inferência no Device
 
 * Vantagens:
 	* Aplicativo não depende de acesso à internet para rodar inferência.
