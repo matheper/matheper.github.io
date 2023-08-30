@@ -27,7 +27,7 @@ Depois de alguns cliques, cheguei ao [pub.dev](https://pub.dev/) que é um geren
 
 Pesquisando por `TensorFlow`, encontrei 3 pacotes disponíveis: tensorflow, tflite e tfliteflutter.
 
-![Flutter e TensorFlow Plugins](https://matheper.com/media/images/Screen_Shot_2020-07-24_at_9.33.58_PM.original.png)
+![Flutter e TensorFlow Plugins](pubdev.png)
 
 Apesar de não ter experiência com Flutter, fiz uma análise rápida das informações disponíveis na própria página do pub.dev: Likes, Popularity, Versão, Data de Publicação e Pub Points. Eu não sabia o que eram esses Pub Points, mas assumi que maior é melhor, depois descobri que é uma [medida de qualidade oficial do pub.dev](https://pub.dev/help/scoring).
 
@@ -49,7 +49,7 @@ Infelizmente, o modelo de transferência de estilo não está disponível enquan
 
 De qualquer forma, é bem divertido ver seu celular rodando alguns algoritmos de Machine Learning em tempo real. Você pode encontrar alguns exemplos de [classificação de imagens](https://github.com/shaqian/flutter_tflite/tree/master/example) e [detecção de objetos](https://github.com/shaqian/flutter_realtime_detection) implementados com TFLite.
 
-Tendo [Flutter instalado](https://matheper.com/2020/08/31/transferencia-de-estilo-com-flutter-e-tensorflow-2/) basta clonar um dos repositórios e rodar os comandos `flutter packages get` e `flutter run`
+Tendo [Flutter instalado]({{< ref "/posts/005-transfer-style-02" >}}) basta clonar um dos repositórios e rodar os comandos `flutter packages get` e `flutter run`
 
 ```
 flutter packages get
