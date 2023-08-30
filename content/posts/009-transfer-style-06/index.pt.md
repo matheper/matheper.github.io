@@ -18,16 +18,16 @@ series_order: 6
 
 Este é o sexto post da série Transferência de Estilo com Flutter, FastAPI e TensorFlow. Nesta série, estou documentando minha experiência desenvolvendo uma aplicação de Machine Learning (ML) do início ao fim.
 
-* [Parte 1 - Transferência de Estilo com Flutter e TensorFlow](https://matheper.com/2020/07/27/transfer%C3%AAncia-de-estilo-com-flutter-e-tensorflow/)
-* [Parte 2 - Primeiros Passos com Flutter](https://matheper.com/2020/08/31/transferencia-de-estilo-com-flutter-e-tensorflow-2/)
-* [Parte 3 - Flutter e suporte ao TensorFlow Lite](https://matheper.com/2020/09/07/flutter-e-suporte-ao-tensorflow-lite/)
-* [Parte 4 - Machine Learning no Device ou Servidor](https://matheper.com/2020/09/12/machine-learning-no-device-ou-servidor/)
-* [Parte 5 - Implementando API de Imagens com FastAPI](https://www.matheper.com/2020/09/20/implementando-api-de-imagens-com-fastapi/)
+* [Parte 1 - Transferência de Estilo com Flutter e TensorFlow]({{< ref "/posts/004-transfer-style-01">}})
+* [Parte 2 - Primeiros Passos com Flutter]({{< ref "/posts/005-transfer-style-02">}})
+* [Parte 3 - Flutter e suporte ao TensorFlow Lite]({{< ref "/posts/006-transfer-style-03">}})
+* [Parte 4 - Machine Learning no Device ou Servidor]({{< ref "/posts/007-transfer-style-04">}})
+* [Parte 5 - Implementando API de Imagens com FastAPI]({{< ref "/posts/008-transfer-style-05">}})
 
 Acabei sendo mais rápido para implementar a aplicação do que para publicar no blog. Se você quiser, já pode acessar o [código completo no GitHub](https://github.com/matheper/style_transfer).
 
 ## Introdução
-No [post anterior](https://www.matheper.com/2020/09/20/implementando-api-de-imagens-com-fastapi/), criamos uma endpoint simple que recebe e retorna uma imagem utilizando Python e FastAPI. Hoje, vamos finalizar a implementação do backend seguindo os seguintes passos:
+No [post anterior]({{< ref "/posts/008-transfer-style-05">}}), criamos uma endpoint simple que recebe e retorna uma imagem utilizando Python e FastAPI. Hoje, vamos finalizar a implementação do backend seguindo os seguintes passos:
 
 * estender o endpoint `/style` para receber duas imagens
 * revisar a lógica do [Notebook original](https://www.tensorflow.org/lite/models/style_transfer/overview) para adaptá-lo e integrá-lo ao backend FastAPI
@@ -75,7 +75,7 @@ Por enquanto, vamos considerar o modelo de transferência de estilo uma caixa fe
 
 O básico que precisamos entender é que, na verdade, o processo de transferência de  estilo utiliza dois modelos: um para identificar o estilo que será aplicado, e um para aplicar este estilo à imagem de conteúdo.
 
-![Style Transfer Architecture](https://storage.googleapis.com/download.tensorflow.org/models/tflite/arbitrary_style_transfer/architecture.png)
+![Style Transfer Architecture](1-architecture.png)
 
 Fonte: [tensorflow.org](https://www.tensorflow.org/lite/models/style_transfer/overview)
 
@@ -374,7 +374,7 @@ O algoritmo fica bem simples com a organização que seguimos até aqui:
 
 ## Resultado final
 
-![ArtisticStyleTransfer](https://matheper.com/media/images/artistic_style_transfer_2.original.jpg)
+![ArtisticStyleTransfer](2-artistic_style_transfer.jpg)
 
 Chegamos ao fim da nossa implementação Python. O backend escrito com FastAPI está pronto para receber duas imagens e combiná-las em uma mistura de estilo e conteúdo utilizando TensorFlow.
 
@@ -382,7 +382,7 @@ Você pode testar a implementação acessando a documentação OpenAPI em `http:
 
 Você também pode acessar o [código no github](https://github.com/matheper/style_transfer/tree/main/fastapi_serving) se tiver qualquer dúvida. No código do repositório também implementei um parâmetro adicional para selecionar o [percentual de mistura do estilo](https://www.tensorflow.org/lite/models/style_transfer/overview#style_blending).
 
-![StyleTransferAPI](https://matheper.com/media/images/StyleTransferAPI.original.jpg)
+![StyleTransferAPI](3-style_transfer_api.jpg)
 
 ## Próximos passos
 
