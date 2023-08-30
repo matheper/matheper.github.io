@@ -17,7 +17,7 @@ series_order: 1
 
 Este é o primeiro post de uma série voltada para o desenvolvimento de uma aplicação de Machine Learning (ML) do início ao fim (end-to-end) utilizando [Flutter](https://flutter.dev/) e [TensorFlow](https://www.tensorflow.org/). Vamos implementar um app que faz a transferência de estilo de uma imagem para as fotos tiradas com o celular utilizando Machine Learning. Uma técnica conhecida como [Neural Artistic Style Transfer](https://arxiv.org/abs/1508.06576).
 
-Nos primeiros post do blog, apresentei um pouco da minha história com [Inteligência Artificial e Machine Learning](https://matheper.com/2020/06/28/minha-hist%C3%B3ria-com-intelig%C3%AAncia-artificial-e-machine-learning/) e compilei uma [lista de materiais](https://matheper.com/2020/07/22/primeiros-passos-machine-learning-e-deep-learning/) que me ajudaram durante meu processo de aprendizagem de ML. Agora chegou a hora de colocar a mão na massa e implementar uma aplicação real que utilize Machine Learning e Deep Learning.
+Nos primeiros post do blog, apresentei um pouco da minha história com [Inteligência Artificial e Machine Learning]({{< ref "/posts/002-my-ai-journey" >}}) e compilei uma [lista de materiais]({{< ref "/posts/003-first-steps-ml-dl" >}}) que me ajudaram durante meu processo de aprendizagem de ML. Agora chegou a hora de colocar a mão na massa e implementar uma aplicação real que utilize Machine Learning e Deep Learning.
 
 Vamos desenvolver um app de celular com Flutter e integrar um modelo de Machine Learning implementado em TensorFlow. Nesta integração, utilizaremos o framwork [TensorFlow Lite](https://www.tensorflow.org/lite), que é uma extensão do TensorFlow para dispositivos móveis e Internet das Coisas.
 
