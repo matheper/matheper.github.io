@@ -13,7 +13,7 @@ series: ["Transferência de Estilo com Flutter e TensorFlow"]
 series_order: 2
 ---
 
-No primeiro post da série [Transferência de Estilo com Flutter e TensorFlow](https://matheper.com/2020/07/27/transfer%C3%AAncia-de-estilo-com-flutter-e-tensorflow/) apresentei uma visão geral da nossa aplicação e alguns dos tópicos que iremos abordar durante o desenvolvimento desse projeto.
+No primeiro post da série [Transferência de Estilo com Flutter e TensorFlow]({{< ref "/posts/004-transfer-style-01">}}) apresentei uma visão geral da nossa aplicação e alguns dos tópicos que iremos abordar durante o desenvolvimento desse projeto.
 
 Como a ideia é utilizar [Flutter](https://flutter.dev) e [TensorFlow Lite](https://www.tensorflow.org/lite/), vamos começar instando e testando o Flutter, principalmente pois não tenho certeza sobre seu suporte ao TFLite. Para isso, vou seguir os [primeiros passo](https://flutter.dev/docs/get-started)  do site oficial que incluem [instalação](https://flutter.dev/docs/get-started/install), [configuração](https://flutter.dev/docs/get-started/editor) e [test drive](https://flutter.dev/docs/get-started/test-drive).
 
@@ -84,34 +84,34 @@ Conforme descrito no [Get Started para MacOS](https://flutter.dev/docs/get-start
 
 Ao rodar o comando `flutter doctor`, que faz um diagnóstico da instalação, descobri que ainda preciso instalar algumas dependências. Como era de se esperar, é necessário instalar o Android toolchain para desenvolvimento Android e o Xcode para desenvolvimento iOS.
 
-![Flutter Doctor](https://matheper.com/media/images/1-FlutterDoctor.original.png)
+![Flutter Doctor](1-FlutterDoctor.png)
 
 Por enquanto vou focar no desenvolvimento Android, então vou tentar instalar apenas o Android toolchain.
 Seguindo os primeiros passos do Flutter, pulei as etapas de instalação iOS e cheguei até a [instalação do SDK Android](https://flutter.dev/docs/get-started/install/macos#android-setup).
 
 Fiz o download, instalei e configurei o SDK, conectei meu celular na USB, ativei o modo de desenvolvedor e rodei o comando  `flutter doctor` novamente.
 
-![Flutter Doctor Licenses](https://matheper.com/media/images/3-FlutterInstallation.original.png)
+![Flutter Doctor Licenses](3-FlutterInstallation.png)
 
 Desta vez, descobri que preciso aceitar as licenças de desenvolvimento do Android, rodei novamente o comando doctor, agora com a flag --android-licenses: `flutter doctor --android-licenses`.
 
-![Flutter Doctor Accept  Licenses](https://matheper.com/media/images/4-Licenses.original.png)
+![Flutter Doctor Accept  Licenses](4-Licenses.png)
 
 Aceitei todas as licenças e agora o sdk está pronto.
 
-![Android SDK Ok](https://matheper.com/media/images/SDK-ok.original.png)
+![Android SDK Ok](SDK-ok.png)
 
 O diagnóstico ainda reclama que o Xcode não está instalado, mas como não vou programar para iOS, está tudo certo. Ele também alerta que os plugins para o Android Studio e o VS Code não estão instalados. Por enquanto também não vou me preocupar com isso.
 
 O último alerta me interessa, ele diz que não tenho um dispositivo conectado, mas meu celular está na USB e está em [modo de desenvolver](https://developer.android.com/studio/debug/dev-options). Imagino que rodar o comando `flutter devices` não vai resolver, mas vamos testar de qualquer forma.
 
-![Flutter Doctor No Devices](https://matheper.com/media/images/no-devices.original.png)
+![Flutter Doctor No Devices](no-devices.png)
 
 Ele sugere rodar `flutter emulators`. Você pode criar um emulador Android com o mando `flutter emulators --create --name nome_do_emulador`. Eu quero testar diretamente no celular, então vamos tentar resolver o problema com o device.
 
 Depois de algum tempo pesquisando e mexendo nas configurações do celular me dei conta de que precisava ativar a opção USB debugging. Logo depois de ativar o debug USB, rodei o comando `flutter devices`, aceitei um diálogo de autorização no celular e, finalmente, tudo pronto.
 
-![Flutter Device Ok](https://matheper.com/media/images/deviceOK.original.png)
+![Flutter Device Ok](deviceOK.png)
 
 ## Primeiro App Flutter
 
@@ -123,7 +123,7 @@ cd transfer_stype_flutter
 flutter run
 ```
 
-![Flutter run](https://matheper.com/media/images/6-Flutter_run.original.png)
+![Flutter run](6-Flutter_run.png)
 
 Se você preferir, pode [instalar os plugins para o Android Studio ou VSCode](https://flutter.dev/docs/get-started/editor?tab=vscode) e [criar seu app de teste](https://flutter.dev/docs/get-started/test-drive?tab=vscode) pela interface do seu editor.
 
