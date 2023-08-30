@@ -17,16 +17,16 @@ series_order: 5
 
 Este é o quinto post da série Transferência de Estilo com Flutter, FastAPI e TensorFlow. Nesta série, estou documentando minha experiência desenvolvendo uma aplicação de Machine Learning (ML) do início ao fim (end-to-end).
 
-* [Parte 1 - Transferência de Estilo com Flutter e TensorFlow](https://matheper.com/2020/07/27/transfer%C3%AAncia-de-estilo-com-flutter-e-tensorflow/)
-* [Parte 2 - Primeiros Passos com Flutter](https://matheper.com/2020/08/31/transferencia-de-estilo-com-flutter-e-tensorflow-2/)
-* [Parte 3 - Flutter e suporte ao TensorFlow Lite](https://matheper.com/2020/09/07/flutter-e-suporte-ao-tensorflow-lite/)
-* [Parte 4 - Machine Learning no Device ou Servidor](https://matheper.com/2020/09/12/machine-learning-no-device-ou-servidor/)
+* [Parte 1 - Transferência de Estilo com Flutter e TensorFlow]({{< ref "/posts/004-transfer-style-01">}})
+* [Parte 2 - Primeiros Passos com Flutter]({{< ref "/posts/005-transfer-style-02">}})
+* [Parte 3 - Flutter e suporte ao TensorFlow Lite]({{< ref "/posts/006-transfer-style-03">}})
+* [Parte 4 - Machine Learning no Device ou Servidor]({{< ref "/posts/007-transfer-style-04">}})
 
 Acabei sendo mais rápido para implementar a aplicação do que para publicar no blog. Se você quiser, já pode acessar o [código completo no GitHub](https://github.com/matheper/style_transfer).
 
 ## Introdução
 
-Utilizar FastAPI não estava no planejamento inicial do projeto mas, devido a [falta de suporte nativo ao TensorFlow Lite no Flutter](https://matheper.com/2020/09/07/flutter-e-suporte-ao-tensorflow-lite/), decidi [mover nosso modelo de Machine Learning do device para um servidor backend](https://matheper.com/2020/09/12/machine-learning-no-device-ou-servidor/).
+Utilizar FastAPI não estava no planejamento inicial do projeto mas, devido a [falta de suporte nativo ao TensorFlow Lite no Flutter]({{< ref "/posts/006-transfer-style-03">}}), decidi [mover nosso modelo de Machine Learning do device para um servidor backend]({{< ref "/posts/007-transfer-style-04">}}).
 
 Vamos utilizar FastAPI para implementar o backend já que, desta forma, podemos executar nosso modelo diretamente no ambiente Python e disponilizá-lo como um simples request de uma API REST.
 
@@ -59,7 +59,7 @@ FastAPI é uma terceira camada de abstração implementada por cima de Starlette
 
 Em benchmarks, FastAPI fica em terceiro lugar em relação à performance de libs Python para web, atrás apenas das próprias libs Uvicorn e Starlette. Entretanto, é preciso lembrar que estas três bibliotecas fornecem níveis diferentes de abstrações e facilidades para o desenvolvimento web.
 
-![FastAPIBenchmark](https://matheper.com/media/images/Screen_Shot_2020-09-19_at_10.40.49_AM.original.png)
+![FastAPIBenchmark](1-FastAPIBenchmark.png)
 (fonte: [TechEmpower Web Framework Benchmarks](https://www.techempower.com/benchmarks/#section=data-r18&hw=ph&test=composite&l=zijzen-7&a=2))
 
 Utilizar apenas Uvicorn trará o máximo de performance em Python para web, mas o mínimo de features. Starlette será um meio termo entre performance e features. FastAPI será mais completo em features, porém menos performático.
@@ -110,7 +110,7 @@ pip install "fastapi[all]"
 ```
 Se você rodar o comando `pip freeze` novamente, agora terá uma lista de pacotes instalados, entre eles `uvicorn`, `starlette` e `pydantic` (que citei anteriormente), mais alguns pacotes bem populares como `urllib3`, `requests`, `PyYAML`, etc.
 
-![FastAPIDependencies](https://matheper.com/media/images/Screen_Shot_2020-09-20_at_11.23.08_AM.original.png)
+![FastAPIDependencies](2-FastAPIDependencies.png)
 
 
 ## REST API
@@ -149,11 +149,11 @@ Somente com essas linhas, já temos uma aplicação que retorna um JSON em um en
 uvicorn main:app --reload
 ```
 
-![UvicornServingFastAPI](https://matheper.com/media/images/Screen_Shot_2020-09-20_at_1.09.14_PM.original.png)
+![UvicornServingFastAPI](3-UvicornServingFastAPI.png)
 
 Você encontrará a mensagem de status acessando `http://127.0.0.1:8000/`. Também é possível acessar a documentação OpenAPI e testar seu backend de forma interativa diretamente em `http://127.0.0.1:8000/docs`.
 
-![FastAPIGetStatus](https://matheper.com/media/images/Screen_Shot_2020-09-20_at_1.10.44_PM.original.png)
+![FastAPIGetStatus](4-FastAPIGetStatus.png)
 
 A [especificação OpenAPI](http://spec.openapis.org/oas/v3.0.3) também pode ser utilizada para a [geração automática de código dos clientes do seu backend](https://github.com/OpenAPITools/openapi-generator#overview).
 
@@ -200,11 +200,11 @@ Finalmente, a imagem é enviada de volta ao cliente. Isto é feito retornando o 
 
 Se voltarmos à documentação, agora temos dois endpoints: GET e POST. O método POST está associado à URL `/style` e recebe um parâmetro `img_bytes` do tipo `bytes`, assim como acabamos de implementar em nosso código.
 
-![FastAPIPostStyle](https://matheper.com/media/images/Screen_Shot_2020-09-20_at_7.08.45_PM.original.png)
+![FastAPIPostStyle](5-FastAPIPostStyle.png)
 
 Ao clicar em `Try it out`, é possível fazer o upload de uma imagem e, ao enviar a request para o servidor, o resultado é a própria imagem, com `status 200` e `content-type image/jpg`.
 
-![FastAPIPostStyleResponse](https://matheper.com/media/images/Screen_Shot_2020-09-20_at_7.10.10_PM.original.png)
+![FastAPIPostStyleResponse](6-FastAPIPostStyleResponse.png)
 
 Basicamente, esta é toda a implementação que precisamos para nossa API, além de alguns testes unitários que acabamos não escrevendo no tutorial.
 
