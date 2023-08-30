@@ -13,7 +13,7 @@ series: ["Transferência de Estilo com Flutter e TensorFlow"]
 series_order: 4
 ---
 
-No post [Flutter e suporte ao TensorFlow Lite](https://matheper.com/2020/09/07/flutter-e-suporte-ao-tensorflow-lite/), mencionei a mudança de planos para servir nosso modelo de Machine Learning (ML) utilizando FastAPI em vez de integrá-lo ao app Flutter. Entretanto, apesar de estar empolgado com a implementação do backend em Python, existem vantagens e desvantagens em rodar um modelo em um servidor ou diretamente no device. Então vamos a algumas considerações quanto ao processo de inferência.
+No post [Flutter e suporte ao TensorFlow Lite]({{< ref "/posts/006-transfer-style-03">}}), mencionei a mudança de planos para servir nosso modelo de Machine Learning (ML) utilizando FastAPI em vez de integrá-lo ao app Flutter. Entretanto, apesar de estar empolgado com a implementação do backend em Python, existem vantagens e desvantagens em rodar um modelo em um servidor ou diretamente no device. Então vamos a algumas considerações quanto ao processo de inferência.
 
 ## Treinamento x Inferência
 
